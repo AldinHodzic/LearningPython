@@ -31,9 +31,6 @@ def add_at_index(list):
     except ValueError:
         print("Error with input.")
 
-
-
-
 list = ["make it work"]
 
 while True:
@@ -64,4 +61,9 @@ while True:
             print_list(list)
         elif choice == 6:
             print("Enteries in list:", len(list))
+
+with open("tasks.txt", "w") as file:
+    for item in list:
+        file.write(item + "\n")
+
 print("Exited program")
